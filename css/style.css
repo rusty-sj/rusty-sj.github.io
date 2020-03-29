@@ -1,0 +1,400 @@
+html, body {
+    font-family: 'Open Sans', sans-serif !important;
+    scroll-behavior: smooth;
+}
+
+header {
+    position: relative;
+    background-color: black;
+    height: 100vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+    position: relative;
+    z-index: 2;
+}
+
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+@media (pointer: coarse) and (hover: none) {
+    header {
+        background: url('../media/background_image.png') black no-repeat 90% 50% scroll;
+    }
+
+    header video {
+        display: none;
+    }
+}
+
+.navbar-custom {
+    background-color: rgba(17, 17, 17, 0.5);
+    -webkit-transition: opacity 400ms ease-out;
+    transition: opacity 400ms ease-out;
+    padding: 0 !important;
+}
+
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: #ffffff !important;
+}
+
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: #FFFFFF !important;
+}
+
+/* change the color of active or hovered links */
+.navbar-custom .nav-link.active,
+.navbar-custom .nav-link:hover {
+    color: #d67b8e !important;
+}
+
+nav {
+    z-index: 5;
+}
+
+.fixed-top.scrolled {
+    background: black;
+}
+
+.profile h1 {
+    font-size: 45px;
+    font-weight: 400;
+    color: white;
+}
+
+.profile .subheading {
+    font-size: 25px;
+    color: #FFF;
+}
+
+.circular {
+    width: 250px;
+    height: 250px;
+    border-radius: 250px;
+    -webkit-border-radius: 250px;
+    -moz-border-radius: 250px;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.down-arrow {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    margin-left: -22px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    -webkit-transition: 0.3s margin-bottom ease;
+    -moz-transition: 0.3s margin-bottom ease;
+    -ms-transition: 0.3s margin-bottom ease;
+    -o-transition: 0.3s margin-bottom ease;
+    transition: 0.3s margin-bottom ease;
+}
+
+
+.down-arrow:hover {
+    margin-bottom: 10px;
+}
+
+.down-arrow:hover svg path {
+    fill: #d67b8e;
+    -webkit-transition: fill 800ms;
+    transition: fill 800ms;
+}
+
+@media print, screen and (max-width: 1200px) {
+
+    .profile h1 {
+        font-size: 35px;
+    }
+
+    .profile .subheading {
+        font-size: 20px;
+    }
+
+    .circular {
+        width: 200px;
+        height: 200px;
+        border-radius: 150px;
+        -webkit-border-radius: 150px;
+        -moz-border-radius: 150px;
+    }
+}
+
+.card {
+    border: 0;
+    border-radius: 0.1875rem;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 20px;
+    -webkit-box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.2);
+}
+
+/*.card .card-body {
+    min-height: 190px;
+}*/
+
+.bg-pink {
+    background-color: #d67b8e;
+}
+
+.badge-info {
+    background-color: #d67b8e !important;
+}
+
+@media (min-width: 768px) {
+    .paddings {
+        padding-left: 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    .paddings {
+        padding: 15px;
+    }
+}
+
+.badge {
+    line-height: 1.5 !important;
+    font-weight: 400 !important;
+}
+
+/*ul.nav li a, ul.nav li a:visited {
+    color: #anycolor !important;
+}
+
+ul.nav li a:hover, ul.nav li a:active {
+    color: #anycolor !important;
+}*/
+
+a {
+    color: #6f42c1 !important;
+}
+
+.gallery .cc-leadership-image figure {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.gallery .cc-leadership-image figure img {
+    position: relative;
+    display: block;
+    max-width: 100%;
+    opacity: 1;
+}
+
+.gallery .cc-leadership-image figure figcaption {
+    position: absolute;
+    color: #fff;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.gallery .cc-leadership-image figure figcaption,
+.gallery .cc-leadership-image figure figcaption > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.gallery .cc-leadership-image figure figcaption > a {
+    z-index: 1000;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0;
+}
+
+.gallery .cc-leadership-image figure .h4,
+.gallery .cc-leadership-image figure p {
+    margin: 0;
+}
+
+.gallery figure.cc-effect figcaption::before,
+.gallery figure.cc-effect figcaption::after {
+    position: absolute;
+    content: '';
+    opacity: 0;
+}
+
+.gallery figure.cc-effect figcaption::before {
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+    -webkit-transform: scale(0, 0);
+    transform: scale(0, 0);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+.gallery figure.cc-effect figcaption::after {
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+    -webkit-transform: scale(0, 0);
+    transform: scale(0, 0);
+    -webkit-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+}
+
+.gallery figure.cc-effect .h4 {
+    margin-top: 20%;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: -webkit-transform 0.35s;
+    transition: transform 0.35s, -webkit-transform 0.35s;
+    opacity: 0;
+}
+
+@media (max-width: 480px) {
+    .gallery figure.cc-effect .h4 {
+        font-size: 14px;
+    }
+}
+
+.gallery figcaption .container {
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+}
+
+.gallery figure.cc-effect p,
+.gallery figure.cc-effect button {
+    padding: 0.5em 2em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: -webkit-transform 0.35s;
+    transition: transform 0.35s, -webkit-transform 0.35s;
+    opacity: 0;
+}
+
+.gallery figure.cc-effect img,
+.gallery figure.cc-effect .h4 {
+    -webkit-transform: scale(1.06, 1.06);
+    transform: scale(1.06, 1.06);
+}
+
+.gallery figure.cc-effect img,
+.gallery figure.cc-effect figcaption::before,
+.gallery figure.cc-effect figcaption::after,
+.gallery figure.cc-effect p {
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+}
+
+.gallery figure.cc-effect:hover img {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.gallery figure.cc-effect:hover figcaption::before,
+.gallery figure.cc-effect:hover figcaption::after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.gallery figure.cc-effect:hover figcaption:before {
+    background: rgba(27, 23, 23, 0.5);
+}
+
+.gallery figure.cc-effect:hover .h4,
+.gallery figure.cc-effect:hover p,
+.gallery figure.cc-effect:hover button {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    color: #fff;
+}
+
+.gallery figure.cc-effect:hover figcaption::after,
+.gallery figure.cc-effect:hover .h4,
+.gallery figure.cc-effect:hover p,
+.gallery figure.cc-effect:hover img {
+    -webkit-transition-delay: 0.15s;
+    transition-delay: 0.15s;
+}
+
+.img-raised {
+    -webkit-box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
+}
+
+.copyleft {
+    display: inline-block;
+    transform: rotate(180deg);
+}
+
+.cc-email i {
+    color: #888;
+}
+
+.cc-github i {
+    color: #888;
+}
+
+.cc-linkedin i {
+    color: #888;
+}
+
+.cc-email:hover i {
+    color: #B23121;
+}
+
+.cc-github:hover i {
+    color: #000000;
+}
+
+.cc-linkedin:hover i {
+    color: #2867B2;
+}
+
+.footer {
+    padding: 20px 0;
+    background-color: #f5f5f5;
+}
