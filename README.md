@@ -1,2 +1,2 @@
 # rusty-sj.github.io
-GitHub Pages
+Personal webpage designed using HTML, CSS, Bootstrap, jQuery, aos.js, and font-awesome. 
