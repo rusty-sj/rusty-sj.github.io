@@ -43,9 +43,19 @@ header .overlay {
     z-index: 1;
 }
 
-@media (pointer: coarse) and (hover: none) {
+/*@media (pointer: coarse) and (hover: none) {
     header {
-        background: url('../media/background_image.png') black no-repeat 90% 50% scroll;
+        background: url('../media/background_image.jpg') black no-repeat 90% 50% scroll;
+    }
+
+    header video {
+        display: none;
+    }
+}*/
+
+@media (max-width: 767px) {
+    header {
+        background: url('../media/background_image.jpg') black no-repeat 90% 50% scroll;
     }
 
     header video {
